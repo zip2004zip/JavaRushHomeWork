@@ -9,18 +9,25 @@ import java.io.*;
 3. выводит на экран максимальное из введенных N чисел.
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int maximum = 15;
+        int maximum = Integer.MIN_VALUE;
+        System.out.println("Введите положительное число");
+        int N = Integer.parseInt(reader.readLine());
+        int[] arr = new int[N];
+        if (N > 0) {
+            System.out.println("Введите " + N + " любых чисел");
+            for (int i = 0; i < N; i++) {
+                arr[i] = Integer.parseInt(reader.readLine());
+            }
+        }
 
-        //напишите тут ваш код
-
-
-
-
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > maximum) {
+                maximum = arr[i];
+            }
+        }
         System.out.println(maximum);
     }
 }

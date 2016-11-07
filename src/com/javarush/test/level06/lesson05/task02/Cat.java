@@ -12,7 +12,7 @@ public class Cat
     protected void finalize() throws Throwable
     {
         super.finalize();
-        System.out.println("класс кот уничтожен");
+        System.out.println("Cat");
     }
 }
 
@@ -24,6 +24,6 @@ class Dog
     protected void finalize() throws Throwable
     {
         super.finalize();
-        System.out.println("класс Dog уничтожен");
+        System.out.printf("Dog");
     }
 }
