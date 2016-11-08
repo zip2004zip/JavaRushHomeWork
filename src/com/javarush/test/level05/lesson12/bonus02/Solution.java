@@ -18,7 +18,7 @@ public class Solution {
         //  System.out.println("Minimum = " + minimum);
 
         System.out.println("Ввести количество цифр для поиска минимального числа");
-        int a = Integer.parseInt(reader.readLine());
+        int a = 5;
         int[] array = new int[a];
         if (a > 0) {
             System.out.println("Введите " + a + " любых чисел");
@@ -26,24 +26,21 @@ public class Solution {
                 array[i] = Integer.parseInt(reader.readLine());
             }
         }
-
-        System.out.printf("Минимальное число " + String.valueOf(min(array)));
+        System.out.printf("Minimum = " + String.valueOf(minimum(array)));
     }
 
     //public static int min(int a, int b) {
     //    return a < b ? a : b;
     //}
 
-    public static int min(int[] array) {
+    public static int minimum(int[] array) {
         //int min = array[0];
-        int min = Integer.MAX_VALUE;
-
+        int minimum = Integer.MAX_VALUE;
         for (int i = 0; i < array.length; i++) {
-            if (min > array[i])
-                min = array[i];
+            if (minimum > array[i])
+                minimum = array[i];
         }
-
-        return min;
+        return minimum;
     }
 
 }
