@@ -1,7 +1,5 @@
 package com.javarush.test.level06.lesson08.task04;
 
-import sun.java2d.d3d.D3DDrawImage;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
@@ -39,11 +37,13 @@ public class ConsoleReader {
     public static boolean readBoolean() throws Exception {
         //напишите тут ваш код
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        boolean b = true;
-        if (bufferedReader.readLine().equals("true"))
-            b = true;
-        else if (bufferedReader.readLine().equals("false"))
-            b = false;
-        return b;
+        Boolean c = true;
+        String s = bufferedReader.readLine();
+        if (s.equals(Boolean.TRUE)) {
+            c = true;
+        } else if (s.equals(Boolean.FALSE)) {
+            c = false;
+        }
+        return c;
     }
 }
